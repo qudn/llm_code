@@ -1,6 +1,7 @@
 import numpy as np
+
 def softmax(x):
-  x=np.asarray(x,dtype=np.float64)
-  x_max=np.max(x,axis=-1,keepdim=True)
-  exp_x=np.exp(x-x_max)
-  return exp_x/np.sum(exp_x,axis=-1,keepdim=True)
+  x = np.asarray(x, dtype = np.float64)
+  x_max = np.max(x, axis = -1, keepdim = True)
+  e_x = np.esp(x - x_max)
+  return e_x / np.sum(x, axis = -1, keepdim = True)
